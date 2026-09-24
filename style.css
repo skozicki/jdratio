@@ -1,0 +1,180 @@
+/* ==========================================================
+   JD RATIO – strona tymczasowa
+   Kolory wg księgi znaku (J_D_logo_v02.pdf)
+   ========================================================== */
+
+/* ---------- Font: Poppins (self-hosted, bez Google Fonts) ---------- */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/poppins-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/poppins-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/poppins-latin-ext-600-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/poppins-latin-600-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/poppins-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/poppins-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- Tokeny ---------- */
+:root {
+  --c-bg:        #f7f7f7; /* tło strony www */
+  --c-text:      #44413f; /* dark_gray – tekst */
+  --c-text-soft: #6e6a67; /* jaśniejsza tonacja dark_gray – tekst pomocniczy */
+  --c-navy:      #333366; /* kolor drugorzędowy – wyróżnienia */
+  --c-teal:      #00a0bb; /* kolor pierwszorzędowy – najważniejsze elementy */
+  --c-honey:     #cc8a00; /* miodowy – tylko w logotypie */
+
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ---------- Baza ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+/* ---------- Układ ---------- */
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3rem, 8vh, 6rem) 1.5rem;
+  text-align: center;
+}
+
+/* Logo */
+.brand img {
+  width: clamp(160px, 40vw, 205px);
+  height: auto;
+}
+
+/* Treść */
+.intro {
+  max-width: 50rem;
+  margin-top: clamp(2.5rem, 9vh, 5.5rem);
+}
+
+h1 {
+  margin: 0;
+  color: var(--c-navy);
+  font-size: clamp(1.75rem, 4.2vw + 0.5rem, 2.875rem); /* max 46px */
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.lead {
+  margin: 1.5rem 0 0;
+  color: var(--c-text-soft);
+  font-size: clamp(0.95rem, 0.2vw + 0.9rem, 1rem);
+}
+
+.notice {
+  margin: 1.75rem 0 0;
+  color: var(--c-text-soft);
+  font-size: clamp(0.9rem, 0.3vw + 0.85rem, 1rem);
+  font-weight: 600;
+}
+
+/* Kontakt */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ikony w jednej linii, jak na wizualizacji */
+  gap: 0.75rem;
+  margin-top: clamp(2.5rem, 6vh, 3.5rem);
+  font-style: normal;
+}
+
+.contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.25rem 0.375rem;
+  border-radius: 4px;
+  color: var(--c-navy);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 0.25em;
+}
+
+.contact svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--c-teal);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact a:hover { text-decoration: underline; text-decoration-color: var(--c-teal); }
+
+.contact a:focus-visible {
+  outline: 2px solid var(--c-teal);
+  outline-offset: 2px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .br-desktop { display: none; }
+}
